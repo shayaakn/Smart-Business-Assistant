@@ -9,6 +9,7 @@ from app.models.base_model import BaseModel
 
 if TYPE_CHECKING:
     from app.models.customer import Customer
+    from app.models.transaction_item import TransactionItem
 
 class TransactionStatus(str, enum.Enum):
     DRAFT = "DRAFT"
@@ -51,6 +52,10 @@ class Transaction(BaseModel):
     # Relationships
     customer: Mapped["Customer | None"] = relationship(
         foreign_keys=[customer_id]
+    )
+    transaction_items: Mapped[list["TransactionItem"]] = relationship(
+        back_populates="transaction",
+        cascade="all, delete-orphan"
     )
 
     __table_args__ = (

@@ -8,6 +8,7 @@ from app.models.base_model import BaseModel
 if TYPE_CHECKING:
     from app.models.category import Category
     from app.models.inventory_movement import InventoryMovement
+    from app.models.transaction_item import TransactionItem
 
 class InventoryItem(BaseModel):
     """
@@ -34,6 +35,9 @@ class InventoryItem(BaseModel):
     movements: Mapped[List["InventoryMovement"]] = relationship(
         back_populates="inventory_item",
         cascade="all, delete-orphan"
+    )
+    transaction_items: Mapped[list["TransactionItem"]] = relationship(
+        back_populates="inventory_item"
     )
 
     __table_args__ = (

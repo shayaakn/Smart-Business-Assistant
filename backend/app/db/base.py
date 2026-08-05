@@ -9,3 +9,4 @@ from app.models.category import Category
 from app.models.inventory_item import InventoryItem
 from app.models.inventory_movement import InventoryMovement
 from app.models.transaction import Transaction
+from app.models.transaction_item import TransactionItem
