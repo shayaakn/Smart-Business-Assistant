@@ -2,5 +2,18 @@ from .base_model import Base, BaseModel
 from .user import User
 from .customer import Customer
 from .supplier import Supplier
+from .category import Category
+from .inventory_item import InventoryItem
+from .inventory_movement import InventoryMovement, MovementType
 
-__all__ = ["Base", "BaseModel", "User", "Customer", "Supplier"]
+__all__ = [
+    "Base",
+    "BaseModel",
+    "User",
+    "Customer",
+    "Supplier",
+    "Category",
+    "InventoryItem",
+    "InventoryMovement",
+    "MovementType",
+]
