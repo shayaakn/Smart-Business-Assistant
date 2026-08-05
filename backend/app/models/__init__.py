@@ -5,6 +5,7 @@ from .supplier import Supplier
 from .category import Category
 from .inventory_item import InventoryItem
 from .inventory_movement import InventoryMovement, MovementType
+from .transaction import Transaction, TransactionStatus
 
 __all__ = [
     "Base",
@@ -16,4 +17,6 @@ __all__ = [
     "InventoryItem",
     "InventoryMovement",
     "MovementType",
+    "Transaction",
+    "TransactionStatus",
 ]
