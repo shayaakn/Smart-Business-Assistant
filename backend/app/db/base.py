@@ -1,7 +1,6 @@
-from app.db.database import Base
+from app.models.base_model import Base
 
 # Import all models here to ensure they are registered with the Base
-from app.models.base_model import Base
 from app.models.user import User
 from app.models.customer import Customer
 from app.models.supplier import Supplier
