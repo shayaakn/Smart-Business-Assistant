@@ -17,7 +17,11 @@ async def health_check():
 
 # Include API routers
 from app.api.customers import router as customers_router
+from app.api.inventory import router as inventory_router
+from app.api.categories import router as categories_router
 app.include_router(customers_router)
+app.include_router(inventory_router)
+app.include_router(categories_router)
 
 
 if __name__ == "__main__":
